@@ -78,6 +78,7 @@ export class Application {
 
     _rootElement: HTMLElement;
     _uiFeatureElement: HTMLElement;
+    _apryseConnect: HTMLElement;
 
     // set the overlay placeholders
     currentOverlay: OverlayBase | null;
@@ -400,6 +401,7 @@ export class Application {
                 this.stream.videoElementParent
             );
             this._rootElement.appendChild(this.uiFeaturesElement);
+            this._rootElement.appendChild(this.apryseConnect);
         }
         return this._rootElement;
     }
@@ -413,6 +415,14 @@ export class Application {
             this._uiFeatureElement.id = 'uiFeatures';
         }
         return this._uiFeatureElement;
+    }
+
+    public get apryseConnect(): HTMLElement {
+        if (!this._apryseConnect) {
+            this._apryseConnect = document.createElement('div');
+            this._apryseConnect.id = 'apryseConnect';
+        }
+        return this._apryseConnect;
     }
 
     /**

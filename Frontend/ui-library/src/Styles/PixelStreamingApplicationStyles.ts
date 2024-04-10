@@ -57,9 +57,15 @@ export class PixelStreamingApplicationStyle {
             userSelect: 'none'
         },
         '#playerUI': {
-            width: '100%',
-            height: '100%',
-            position: 'relative'
+            width: 'calc(100% - 20px)',
+            height: 'calc(100% - 160px)',
+            // padding: '150px 10px 0',
+            top: '150px',
+            left: '10px',
+            right: '10px',
+            bottom: '10px',
+            position: 'relative',
+            zIndex: '20',
         },
         '#videoElementParent': {
             width: '100%',
