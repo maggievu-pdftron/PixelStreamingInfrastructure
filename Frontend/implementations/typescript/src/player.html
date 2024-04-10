@@ -8,16 +8,16 @@
     <!-- Optional: apply a font -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
 	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-	<link href="https://fonts.googleapis.com/css2?family=Michroma&family=Montserrat:wght@600&display=swap" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css2?family=Michroma&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
 
     <!-- Optional: set some favicons -->
     <link rel="shortcut icon" href="./assets/images/favicon.ico" type="image/x-icon">
-	<link rel="icon" type="image/png" sizes="96x96" href="./assets/images/favicon-96x96.png">
+	<!-- <link rel="icon" type="image/png" sizes="96x96" href="./assets/images/favicon-96x96.png"> -->
 	<link rel="icon" type="image/png" sizes="32x32" href="./assets/images/favicon-32x32.png">
 	<link rel="icon" type="image/png" sizes="16x16" href="./assets/images/favicon-16x16.png">
 
     <!-- Optional: set a title for your page -->
-    <title>Pixel Streaming</title>
+    <title>Connect by Apryse</title>
 
     <style>
         .apryse {
@@ -34,6 +34,7 @@
         
         .section-title {
             color: white;
+            font-weight: 600;
         }
         
         .img-wrapper {
@@ -55,7 +56,7 @@
 <!-- The Pixel Streaming player fills 100% of its parent element but body has a 0px height unless filled with content. As such, we explicitly force the body to be 100% of the viewport height -->
 <body style="width: 100vw; height: 100vh; min-height: -webkit-fill-available; font-family: 'Montserrat'; margin: 0px">
     <div class="apryse">
-        <div class="content">
+        <div style="position: relative;">
             <div>
                 <div class="section-title">My Team</div>
                 <div class="img-wrapper">
@@ -77,6 +78,9 @@
                 </div>
             </div>
             <div class="section-title">Active Collaborations</div>
+            <div style="position: absolute; top: -10px; right: 9px;">
+                <img src="./assets/images/connect.png" alt="logo" style="max-width: 90px;">
+            </div>
         </div>
 
     </div>
