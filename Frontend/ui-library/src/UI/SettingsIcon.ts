@@ -18,7 +18,7 @@ export class SettingsIcon {
             this._rootElement.classList.add('UiTool');
             this._rootElement.id = 'settingsBtn';
             this._rootElement.appendChild(this.settingsIcon);
-            this._rootElement.appendChild(this.tooltipText);
+            // this._rootElement.appendChild(this.tooltipText);
         }
         return this._rootElement;
     }

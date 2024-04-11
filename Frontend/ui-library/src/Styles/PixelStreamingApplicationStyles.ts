@@ -82,26 +82,26 @@ export class PixelStreamingApplicationStyle {
             pointerEvents: 'none',
             overflow: 'hidden'
         },
-        '.UiTool .tooltiptext': {
-            visibility: 'hidden',
-            width: 'auto',
-            color: 'var(--color2)',
-            textAlign: 'center',
-            borderRadius: '15px',
-            padding: '0px 10px',
-            fontFamily: "'Montserrat', sans-serif",
-            fontSize: '0.75rem',
-            letterSpacing: '0.75px',
-            position: 'absolute',
-            top: '0',
-            transform: 'translateY(25%)',
-            left: '125%',
-            zIndex: '20'
-        },
-        '.UiTool:hover .tooltiptext': {
-            visibility: 'visible',
-            backgroundColor: 'var(--color7)'
-        },
+        // '.UiTool .tooltiptext': {
+        //     visibility: 'hidden',
+        //     width: 'auto',
+        //     color: 'var(--color2)',
+        //     textAlign: 'center',
+        //     borderRadius: '15px',
+        //     padding: '0px 10px',
+        //     fontFamily: "'Montserrat', sans-serif",
+        //     fontSize: '0.75rem',
+        //     letterSpacing: '0.75px',
+        //     position: 'absolute',
+        //     top: '0',
+        //     transform: 'translateY(25%)',
+        //     left: '125%',
+        //     zIndex: '20'
+        // },
+        // '.UiTool:hover .tooltiptext': {
+        //     visibility: 'visible',
+        //     backgroundColor: 'var(--color7)'
+        // },
         '#connection .tooltiptext': {
             top: '125%',
             transform: 'translateX(-25%)',
@@ -157,8 +157,8 @@ export class PixelStreamingApplicationStyle {
         },
         '#controls': {
             position: 'absolute',
-            top: '3%',
-            left: '2%',
+            top: '10px',
+            left: '10px',
             fontFamily: "'Michroma', sans-serif",
             pointerEvents: 'all',
             display: 'block'
@@ -199,17 +199,17 @@ export class PixelStreamingApplicationStyle {
             textAlign: 'center'
         },
         '#uiFeatures button:hover': {
-            backgroundColor: 'var(--color3)',
-            border: '3px solid var(--color3)',
-            transition: '0.25s ease',
-            paddingLeft: '0.55rem',
-            paddingTop: '0.55rem'
+            // backgroundColor: 'var(--color3)',
+            // border: '3px solid var(--color3)',
+            // transition: '0.25s ease',
+            // paddingLeft: '0.55rem',
+            // paddingTop: '0.55rem'
         },
         '#uiFeatures button:active': {
-            border: '3px solid var(--color3)',
-            backgroundColor: 'var(--color7)',
-            paddingLeft: '0.55rem',
-            paddingTop: '0.55rem'
+            // border: '3px solid var(--color3)',
+            // backgroundColor: 'var(--color7)',
+            // paddingLeft: '0.55rem',
+            // paddingTop: '0.55rem'
         },
         '.btn-flat': {
             backgroundColor: 'transparent',
@@ -526,7 +526,10 @@ export class PixelStreamingApplicationStyle {
         },
         '.svgIcon': {
             fill: '#abb0c4',
-        }
+        },
+        '#settingsBtn:hover .svgIcon': {
+            fill: 'white',
+        },
     };
 
     customStyles?: Partial<Styles>;
