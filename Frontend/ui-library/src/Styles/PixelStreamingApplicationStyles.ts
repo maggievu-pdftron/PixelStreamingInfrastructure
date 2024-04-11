@@ -110,6 +110,7 @@ export class PixelStreamingApplicationStyle {
             padding: '5px 10px'
         },
         '#connection': {
+            display: 'none',
             position: 'absolute',
             bottom: '8%',
             left: '5%',
@@ -175,6 +176,7 @@ export class PixelStreamingApplicationStyle {
             fontFamily: "'Montserrat', sans-serif"
         },
         '#fullscreen-btn': {
+            display: 'none',
             padding: '0.6rem !important'
         },
         '#minimizeIcon': {
@@ -183,10 +185,13 @@ export class PixelStreamingApplicationStyle {
         '#settingsBtn, #statsBtn': {
             cursor: 'pointer'
         },
+        '#statsBtn': {
+            display: 'none',
+        },
         '#uiFeatures button': {
-            backgroundColor: 'var(--color7)',
-            border: '1px solid var(--color7)',
-            color: 'var(--color2)',
+            backgroundColor: 'initial',
+            border: 'initial',
+            color: 'initial',
             position: 'relative',
             width: '3rem',
             height: '3rem',
@@ -520,7 +525,7 @@ export class PixelStreamingApplicationStyle {
             paddingRight: '4px'
         },
         '.svgIcon': {
-            fill: 'var(--color2)'
+            fill: '#abb0c4',
         }
     };
 

@@ -8,11 +8,11 @@
     <!-- Optional: apply a font -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
 	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-	<link href="https://fonts.googleapis.com/css2?family=Michroma&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap" rel="stylesheet">
 
     <!-- Optional: set some favicons -->
     <link rel="shortcut icon" href="./assets/images/favicon.ico" type="image/x-icon">
-	<!-- <link rel="icon" type="image/png" sizes="96x96" href="./assets/images/favicon-96x96.png"> -->
+	<link rel="icon" type="image/png" sizes="96x96" href="./assets/images/favicon-96x96.png">
 	<link rel="icon" type="image/png" sizes="32x32" href="./assets/images/favicon-32x32.png">
 	<link rel="icon" type="image/png" sizes="16x16" href="./assets/images/favicon-16x16.png">
 
@@ -49,38 +49,96 @@
                 max-width: 70px;
                 border-radius: 50%;
             }
+
+            .img-container {
+                position: relative;
+            }
+
+            .img-active-icon {
+                display: none;
+                position: absolute;
+                top: 3px;
+                right: 3px;
+                width: 12px;
+                height: 12px;
+                border-radius: 50%;
+                background-color: #05b714;
+            }
+            
+        }
+
+        #notification {
+            display: flex;
+            position: fixed;
+            top: 10px;
+            right: -250px;
+            padding: 5px 20px;
+            background-color: white;
+            border-radius: 30px;
+            align-items: center;
+            font-size: 12px;
+            transition: all .4s ease-in;
+        }
+        
+        #notification-img {
+            width: 35px;
+            border-radius: 50%;
+            margin-right: 10px;
         }
     </style>
+    <script>
+        function clickImage(target) {
+            const notification = document.querySelector('#notification');
+            const notificationContent = document.querySelector('#notification-content');
+            notificationContent.innerHTML = `${target.alt} joined the session`;
+            const notificationImg = document.querySelector('#notification-img');
+            notificationImg.src = target.src;
+            setTimeout(() => notification.style.transform = 'translateX(-260px)', 500);
+            setTimeout(() => notification.style.transform = 'initial', 4000);
+            const imgActiveIcon = target.nextElementSibling;
+            setTimeout(() => imgActiveIcon.style.display = 'block', 1000);
+        }
+    </script>
 </head>
 
 <!-- The Pixel Streaming player fills 100% of its parent element but body has a 0px height unless filled with content. As such, we explicitly force the body to be 100% of the viewport height -->
-<body style="width: 100vw; height: 100vh; min-height: -webkit-fill-available; font-family: 'Montserrat'; margin: 0px">
+<body style="width: 100vw; height: 100vh; min-height: -webkit-fill-available; font-family: 'Lato'; margin: 0px">
     <div class="apryse">
         <div style="position: relative;">
             <div>
                 <div class="section-title">My Team</div>
                 <div class="img-wrapper">
-                    <div>
-                        <img src="https://ca.slack-edge.com/T0280EBQ1-U03B23KJEQ3-d91069d0b6f1-512" alt="Bryan">
+                    <div class="img-container">
+                        <img src="./assets/images/bryan.jpeg" alt="Bryan" onclick="clickImage(this)">
+                        <span class="img-active-icon"></span>
                     </div>
-                    <div>
-                        <img src="https://ca.slack-edge.com/T0280EBQ1-U03AZ9DFH61-132647d1e82d-512" alt="Adam">
+                    <div class="img-container">
+                        <img src="./assets/images/adam.jpeg" alt="Adam" onclick="clickImage(this)">
+                        <span class="img-active-icon"></span>
                     </div>
-                    <div>
-                        <img src="https://ca.slack-edge.com/T0280EBQ1-U03B217H0AX-d9095bb3d9db-512" alt="Maggie">
+                    <div class="img-container">
+                        <img src="./assets/images/maggie.jpeg" alt="Maggie" onclick="clickImage(this)">
+                        <span class="img-active-icon"></span>
                     </div>
-                    <div>
-                        <img src="https://ca.slack-edge.com/T0280EBQ1-U03BRNMMKK2-9c59fa0f5b25-512" alt="Yixiao">
+                    <div class="img-container">
+                        <img src="./assets/images/yixiao.png" alt="Yixiao" onclick="clickImage(this)">
+                        <span class="img-active-icon"></span>
                     </div>
-                    <div>
-                        <img src="https://ca.slack-edge.com/T0280EBQ1-U03BENML8LR-49e7eb7a8de4-512" alt="Jack">
+                    <div class="img-container">
+                        <img src="./assets/images/jack.jpeg" alt="Jack" onclick="clickImage(this)">
+                        <span class="img-active-icon"></span>
                     </div>
                 </div>
             </div>
             <div class="section-title">Active Collaborations</div>
-            <div style="position: absolute; top: -10px; right: 9px;">
+            <div style="position: absolute; top: -9px; right: 11px;">
                 <img src="./assets/images/connect.png" alt="logo" style="max-width: 90px;">
             </div>
+        </div>
+
+        <div id="notification">
+            <img id="notification-img">
+            <span id="notification-content"></span>
         </div>
 
     </div>
